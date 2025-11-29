@@ -1,9 +1,24 @@
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext.jsx";
+import { Navigate } from "react-router-dom";
 
 const Cart = () => {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
     const { cart, clearCart, removeFromCart, increaseAmount, decreaseAmount, total } = useContext(CartContext);
+
+    const handleCheckout = () => {
+    if (user) {
+        // If logged in, go to success page
+        navigate('/checkout');
+        // You would usually also clearCart() here
+    } else {
+        // If NOT logged in, go to login
+        navigate('/login');
+    }
+};
 
       if (cart.length === 0) {
          return (
@@ -71,7 +86,7 @@ const Cart = () => {
           Clear Cart
         </button>
         
-        <button 
+        <button onClick={handleCheckout}
           style={{ background: 'green', color: 'white', border: 'none', padding: '10px 20px', cursor: 'pointer' }}
         >
           Checkout
