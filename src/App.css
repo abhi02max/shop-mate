@@ -79,3 +79,76 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+/* Option 1 CSS */
+.login-container {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center; /* Center Horizontally */
+  align-items: center;     /* Center Vertically */
+  background-color: #f0f2f5;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft shadow */
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  margin-top: 0;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Fixes padding issues */
+}
+
+.input-group input:focus {
+  border-color: #007bff; /* Blue focus */
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}

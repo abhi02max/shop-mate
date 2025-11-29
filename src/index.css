@@ -163,3 +163,62 @@ footer {
     background: var(--bg-light);
   }
 }
+/* Option 3 CSS */
+.glass-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Cool Gradient Background */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px); /* The Blur Effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px;
+  width: 350px;
+  text-align: center;
+  color: white;
+}
+
+.glass-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1); /* See-through inputs */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px; /* Rounded pills */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.glass-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.glass-btn {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  color: #764ba2;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.glass-btn:hover {
+  transform: scale(1.05);
+}

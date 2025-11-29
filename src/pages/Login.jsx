@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { AuthContext } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -20,30 +20,28 @@ const Login = () => {
         }   
     };
     return (
-        <div className="login-container">
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Username:</label>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />  
-                </div>
-                <div>
-                    <label>Password:</label>    
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}       
-                    />
-                </div>
-                {error && <p className="error">{error}</p>}
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    );
-};
-
+  <div className="glass-container">
+    <div className="glass-card">
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          placeholder="Username" 
+          value={username} 
+          onChange={(e) => setUsername(e.target.value)}
+          className="glass-input"
+        />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)}
+          className="glass-input"
+        />
+        <button type="submit" className="glass-btn">Enter</button>
+      </form>
+    </div>
+  </div>
+)
+}
 export default Login;
